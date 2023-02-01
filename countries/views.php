@@ -101,32 +101,25 @@ $result = Levels($id, $conn);
 
 
 
-<div class="container">
-    <div class="row">
-    <div class="col-lg-12 bg-white shadow b-4 rounded">
-  
-    </div>
-    
-    </div>
-</div>
-
 
 
 <!-- check availability form -->
-<div class="container availability-form">
+<div class="container availability-form container d-flex justify-content-center p-4">
   <div class="row">
     <div class="col-lg-12 bg-white shadow b-4 rounded">
     <br><br>
     <br><br>
 
    
-    <form action = "resultDisplay.php?id=<?php echo $id;?>" method = 'post'>
+<div class="container">
+  <div class="col-lg-12">
+  <form action = "resultDisplay.php?id=<?php echo $id;?>" method = 'post'>
         <div class="row align-items-end">
          
 
 
         
-          <div class="col-lg-3 mb-3">
+          <div class="col-lg-4 mb-3 d-flex  justify-content-between">
             <?php
     echo "<label class='form-label' style='font-weight: 500;' for='searchby'>Search by: </label><select name = 'counties'>";
     while ($row = mysqli_fetch_array($result)) {
@@ -142,8 +135,8 @@ $result = Levels($id, $conn);
           </div>
 
 
-          <div class="col-lg-2 mb-3">
-            <label  class="form-label" style="font-weight: 500;" for="searchby">View a list of all:</label>
+          <div class="col-lg-4 mb-3 d-flex  justify-content-between">
+            <label  class='form-label' style='font-weight: 500;' for='searchby'>View all Countries :</label>
             <?php
                 $db = mysqli_connect("localhost", "root", "", "counties");
                 $sql = mysqli_query($db, "SELECT * FROM levels");
@@ -166,13 +159,10 @@ $result = Levels($id, $conn);
             <input type = "submit" value = "submit" name = "viewsbtn" class="btn text-white shadow-none custome-bg">
             </select>      
           </div>
-
-          <div class="col-lg-1">
-
-          </div>
-
         </div>
-      </form>  
+      </form> 
+  </div>
+</div> 
       
    </div>
   </div>

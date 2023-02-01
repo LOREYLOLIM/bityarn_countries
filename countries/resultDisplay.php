@@ -87,15 +87,6 @@
 
 
 
-<div class="container">
-    <div class="row">
-    <div class="col-lg-12 bg-white shadow b-4 rounded">
-  
-    </div>
-    
-    </div>
-</div>
-
 
 
 <?php
@@ -112,7 +103,8 @@ $result = country($id, $level, $conn, $searchBy);
     <div class="row">
     <form action="index.php" id="" method = "post">
 
-<table class="table">
+<table class="table ">
+  <div class="col-lg-4 mb-3 d-flex  justify-content-between">
   <thead>
     <tr>
       <th scope="col">
@@ -140,6 +132,8 @@ $result = country($id, $level, $conn, $searchBy);
     }
     ?>
   </tbody>
+
+  </div>
 </table>
 
     <input type = "submit" name = "back" value = "Back to Levels"  class="btn text-white shadow-none custome-bg"><br>
