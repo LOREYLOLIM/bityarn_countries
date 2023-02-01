@@ -15,7 +15,7 @@ $result = Levels($id, $conn);
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8">    
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Countries</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
@@ -106,7 +106,7 @@ $result = Levels($id, $conn);
 <!-- check availability form -->
 <div class="container availability-form container d-flex justify-content-center p-4">
   <div class="row">
-    <div class="col-lg-12 bg-white shadow b-4 rounded">
+    <div class="col-lg-12 bg- white shadow b-4 rounded">
     <br><br>
     <br><br>
 
@@ -135,8 +135,8 @@ $result = Levels($id, $conn);
           </div>
 
 
-          <div class="col-lg-4 mb-3 d-flex  justify-content-between">
-            <label  class='form-label' style='font-weight: 500;' for='searchby'>View all Countries :</label>
+          <div class="col-lg-3 mb-3 d-flex  justify-content-between">
+            <label  class='form-label' style='font-weight: 500;' for='searchby'>View all:</label>
             <?php
                 $db = mysqli_connect("localhost", "root", "", "counties");
                 $sql = mysqli_query($db, "SELECT * FROM levels");
